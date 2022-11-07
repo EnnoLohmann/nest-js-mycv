@@ -1,0 +1,53 @@
+### Create a new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "newUser2@lohmann.dev",
+    "password": "Test1234"
+}
+
+### Signin a user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "newUser2@lohmann.dev",
+    "password": "Test1234"
+}
+
+### Signout a user
+POST http://localhost:3000/auth/signout
+
+### Return the current User
+
+GET http://localhost:3000/auth/whoami
+
+### Find a User with a given id
+
+GET http://localhost:3000/auth/2
+
+### Find a User with a given email
+
+GET http://localhost:3000/auth?email=enno2@lohmann.dev
+
+### Remote a User with a given id
+
+DELETE http://localhost:3000/auth/10
+
+### Update a user
+PATCH http://localhost:3000/auth/2
+Content-Type: application/json
+
+{
+    "email": "Test2@lohmann.dev"
+}
+
+### Set color for a user
+
+GET http://localhost:3000/auth/colors/blue
+
+
+### Get color for a user
+
+GET http://localhost:3000/auth/colors
